@@ -10,6 +10,7 @@
     --secondary-background-color: #2F303A;
     --button-bg-color: #F5F4FA;
     --team-background-color: #F5F4FA;
+    --icon-fill-color: #AFB1B8;
 
 }
 body {
@@ -89,6 +90,8 @@ body {
 .button-portfolio:focus {
     color: var(--primary-button-color);
     background-color: var(--accent);
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .section {
     padding-top: 94px;
@@ -97,7 +100,8 @@ body {
 
 .features-title,
 .work-title,
-.team-title {
+.team-title,
+.client-title {
     margin-top: 0;
     margin-bottom: 50px;
 
@@ -121,6 +125,12 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* Шапка сайта */
 .page-header {
     border-bottom: 1px solid #ECECEC;;
@@ -164,6 +174,10 @@ body {
     display: flex;
     margin-left: auto;
 }
+.contact-nav-item .link {
+    display: flex;
+    align-items: center;
+}
 .contact-nav-item:not(:last-child) {
     margin-right: 50px;
 }
@@ -175,23 +189,35 @@ body {
     letter-spacing: 0.02em;
     text-decoration: none;
 }
+.link-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
 .contact-nav .link:hover,
 .contact-nav .link:focus {
     color: var(--accent);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
 }
 
 /* Блок Герой */
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-
-    background-color: var(--secondary-background-color);
-    
+   
     text-align: center;
+
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background-image:
+            linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url('../images/hero-picture\ .jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--secondary-background-color);
 }
 .hero-title {
     margin-top: 0;
@@ -231,6 +257,13 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
+.feature-picture {
+    padding: 25px 100px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    background-color: var(--team-background-color);
+}
 .features-text {
     margin-top: 0;
     margin-bottom: 0;
@@ -247,9 +280,6 @@ body {
 }
 .work-list-item:not(:last-child) {
     margin-right: 30px;
-}
-.work-picture {
-    display: block;
 }
 /* Наша команда */
 .team {
@@ -286,19 +316,66 @@ body {
 }
 .team-description {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 19px;
 
     font-size: 16px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
 }
+.social-list {
+    display: flex;
+}
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+.social-link {
+    display: block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+
+    fill: var(--icon-fill-color);
+}
+.social-link:hover,
+.social-link:focus {
+    border-radius: 50%;
+    background-color: var(--accent);
+    fill: var(--additional-secondary-text-color);
+}
+.client-list {
+    display: flex;
+}
+.client-item:not(:last-child) {
+    margin-right: 30px;
+}
+.client-link {
+    display: block;
+    padding: 16px 32px;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-fill-color);
+    border-radius: 4px;
+
+    fill: var(--icon-fill-color);
+}
+.client-link:hover,
+.client-link:focus {
+    border-color: var(--accent);
+    fill: var(--accent);
+}
 /* Подвал */
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
 
     background-color: var(--secondary-background-color);
+}
+.footer-container {
+    display: flex;
+}
+.address-block {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-right: 70px;
 }
 .footer .logo {
     display: block;
@@ -333,6 +410,47 @@ body {
 .address-nav .map {
     color: var(--primary-background-color);
 }
+.join-block {
+    padding-top: 72px;
+    padding-bottom: 100px;
+}
+.join {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: var(--additional-secondary-text-color);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.join-list {
+    display: flex;
+}
+
+.join-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.join-link {
+    display: block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    
+    background-color: #43444D;
+    fill: var(--additional-secondary-text-color);
+}
+
+.join-link:hover,
+.join-link:focus {
+    border-radius: 50%;
+    background-color: var(--accent);
+}
 /* Страница Портфолио */
 /* Блок Герой */
 .button-list {
@@ -355,6 +473,11 @@ body {
     background-color: var(--primary-background-color);
 }
 
+.portfolio-list .link:hover,
+.portfolio-list .link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-picture {
     display: block;
     margin-top: 0;
@@ -366,6 +489,7 @@ body {
     border-top: none;
 }
 .portfolio-card .link {
+    display: block;
     text-decoration: none;
 }
 .portfolio-title {
