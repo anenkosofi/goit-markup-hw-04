@@ -206,7 +206,6 @@ img {
     text-align: center;
 
     max-width: 1600px;
-    height: 600px;
     margin-left: auto;
     margin-right: auto;
     
@@ -258,9 +257,11 @@ img {
     text-transform: uppercase;
 }
 .feature-picture {
-    padding: 25px 100px;
+    display: flex;
+    justify-content: center;
     margin-top: 0;
     margin-bottom: 30px;
+    height: 120px;
 
     background-color: var(--team-background-color);
 }
@@ -330,8 +331,9 @@ img {
     margin-right: 10px;
 }
 .social-link {
-    display: block;
-    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
 
@@ -350,8 +352,9 @@ img {
     margin-right: 30px;
 }
 .client-link {
-    display: block;
-    padding: 16px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 170px;
     height: 92px;
     border: 1px solid var(--icon-fill-color);
@@ -366,15 +369,16 @@ img {
 }
 /* Подвал */
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     background-color: var(--secondary-background-color);
 }
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 .address-block {
-    padding-top: 60px;
-    padding-bottom: 60px;
     margin-right: 70px;
 }
 .footer .logo {
@@ -410,10 +414,7 @@ img {
 .address-nav .map {
     color: var(--primary-background-color);
 }
-.join-block {
-    padding-top: 72px;
-    padding-bottom: 100px;
-}
+
 .join {
     display: block;
     margin-top: 0;
@@ -436,7 +437,9 @@ img {
 }
 
 .join-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px;
     width: 44px;
     height: 44px;
